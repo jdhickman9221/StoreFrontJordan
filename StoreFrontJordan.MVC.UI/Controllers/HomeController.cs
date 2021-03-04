@@ -13,7 +13,7 @@ namespace StoreFrontJordan.MVC.UI.Controllers
             return View();
         }
 
-        public ActionResult About()
+        public ActionResult Store()
         {
             ViewBag.Message = "Your application description page.";
 
@@ -22,9 +22,23 @@ namespace StoreFrontJordan.MVC.UI.Controllers
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            
 
             return View();
         }
+        public ActionResult Checkout()
+        {
+
+
+            return View();
+        }
+
+        public ActionResult Cart()
+        {
+
+
+            return View();
+        }
+
     }
 }

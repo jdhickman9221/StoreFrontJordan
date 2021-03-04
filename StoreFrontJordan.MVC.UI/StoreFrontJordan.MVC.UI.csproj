@@ -291,7 +291,6 @@
     <Content Include="_Archive\footwear-master\men.html" />
     <Content Include="_Archive\footwear-master\order-complete.html" />
     <Content Include="_Archive\footwear-master\product-detail.html" />
-    <Content Include="_Archive\footwear-master\women.html" />
     <Content Include="Content\.sass-cache\060b528537134f2f9508a1cf1546b6a2908e8035\_alerts.scssc" />
     <Content Include="Content\.sass-cache\060b528537134f2f9508a1cf1546b6a2908e8035\_badges.scssc" />
     <Content Include="Content\.sass-cache\060b528537134f2f9508a1cf1546b6a2908e8035\_breadcrumbs.scssc" />
@@ -1338,7 +1337,7 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Store.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="_Archive\footwear-master\.DS_Store" />
@@ -2367,6 +2366,9 @@
     <Content Include="_Archive\footwear-master\sass\bootstrap\_utilities.scss" />
     <Content Include="_Archive\footwear-master\sass\bootstrap\_variables.scss" />
     <Content Include="_Archive\footwear-master\sass\style.scss" />
+    <Content Include="Views\Shared\_OriginalLayout.cshtml" />
+    <Content Include="Views\Home\Checkout.cshtml" />
+    <Content Include="Views\Home\Cart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

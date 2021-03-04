@@ -1,42 +1,159 @@
-﻿<!DOCTYPE html>
+﻿<!DOCTYPE HTML>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <title>@ViewBag.Title - The Luminary - Body Jewelery </title>
+    @* Title Check *@
+    <meta charset="utf-8">
+    @* charset Check *@
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    @* Responsive Check *@
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+    @* Import *@
+    <link href="https://fonts.googleapis.com/css?family=Rokkitt:100,300,400,700" rel="stylesheet">
+    @* Import *@
+
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="~/Content/css/animate.css">
+    <!-- Icomoon Icon Fonts-->
+    <link rel="stylesheet" href="~/Content/css/icomoon.css">
+    <!-- Ion Icon Fonts-->
+    <link rel="stylesheet" href="~/Content/css/ionicons.min.css">
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <!-- Magnific Popup -->
+    <link rel="stylesheet" href="~/Content/css/magnific-popup.css">
+    <!-- Flexslider  -->
+    <link rel="stylesheet" href="~/Content/css/flexslider.css">
+    <!-- Owl Carousel -->
+    <link rel="stylesheet" href="~/Content/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="~/Content/css/owl.theme.default.min.css">
+
+    <!-- Date Picker -->
+    <link rel="stylesheet" href="~/Content/css/bootstrap-datepicker.css">
+    <!-- Flaticons  -->
+    <link rel="stylesheet" href="~/Content/fonts/flaticon/font/flaticon.css">
+    <!-- Theme style  -->
+    <link rel="stylesheet" href="~/Content/css/style.css">
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+
+    <div class="colorlib-loader"></div>
+    <div id="page">
+
+
+        @* NAV SECTION *@
+        <nav class="colorlib-nav" role="navigation">
+            <div class="top-menu">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-7 col-md-9">
+                            <div id="colorlib-logo"><a href="@Url.Action("Index","Home")">The Luminary</a></div>
+                        </div>
+                        <div class="col-sm-5 col-md-3">
+                            <form action="#" class="search-wrap">
+                                <div class="form-group">
+                                    @*<input type="search" class="form-control search" placeholder="Search">
+                                    <button class="btn btn-primary submit-search text-center" type="submit"><i class="icon-search"></i></button>*@
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12 text-left menu-1">
+                            <ul class="main-nav">
+                                <li><a href="@Url.Action("Index","Home")">Home</a></li>
+                                <li class="has-dropdown">
+                                    <a href="@Url.Action("Store","Home")">Jewelery</a>
+                                    <ul class="dropdown">
+                                        <li><a href="product-detail.html">Category</a></li>
+                                        <li><a href="cart.html">Shopping Cart</a></li>
+                                        <li><a href="checkout.html">Checkout</a></li>
+                                        <li><a href="order-complete.html">Order Complete</a></li>
+                                        <li><a href="add-to-wishlist.html"></a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="@Url.Action("Contact","Home")">Contact</a></li>
+                                @*<li class="active"><a href="about.html">About</a></li>*@
+                                <li><a href="@Url.Action("Checkout","Home")">Checkout</a></li>
+                                @* TODO add link *@
+                                <li class="cart"><a href="@Url.Action("Cart","Home")"><i class="icon-shopping-cart"></i> Cart [0]</a></li>*
+                                @* TODO ADD LINK *@
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                </ul>
+            <div class="sale">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 offset-sm-2 text-center">
+                            <div class="row">
+                                <div class="owl-carousel2">
+                                    <div class="item">
+                                        <div class="col">
+                                            <h3><a href="#">Exotic Pieces. Quality Materials. All For You.</a></h3>
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="col">
+                                            <h3><a href="#">Welcome to The Luminary - Body Jewelery</a></h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-    <div class="container body-content">
-        @RenderBody()
-        <hr />
-        <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </nav>
+        @*<div class="breadcrumbs">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <p class="bread"><span><a href="index.html">Home</a></span> / <span>About</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>*@
+        <main class="main">
+            @RenderBody()
+        </main>
+        @* FOOTER SECTION *@
+        <footer id="colorlib-footer" role="contentinfo">
+            <div class="container">
+                
+            </div>
         </footer>
     </div>
+    <div class="gototop js-top">
+        <a href="#" class="js-gotop"><i class="ion-ios-arrow-up"></i></a>
+    </div>
 
-    @Scripts.Render("~/bundles/jquery")
-    @Scripts.Render("~/bundles/bootstrap")
-    @RenderSection("scripts", required: false)
+    <!-- jQuery -->
+    <script src="~/Content/js/jquery.min.js"></script>
+    <!-- popper -->
+    <script src="~/Content/js/popper.min.js"></script>
+    <!-- bootstrap 4.1 -->
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <!-- jQuery easing -->
+    <script src="~/Content/js/jquery.easing.1.3.js"></script>
+    <!-- Waypoints -->
+    <script src="~/Content/js/jquery.waypoints.min.js"></script>
+    <!-- Flexslider -->
+    <script src="~/Content/js/jquery.flexslider-min.js"></script>
+    <!-- Owl carousel -->
+    <script src="~/Content/js/owl.carousel.min.js"></script>
+    <!-- Magnific Popup -->
+    <script src="~/Content/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Content/js/magnific-popup-options.js"></script>
+    <!-- Date Picker -->
+    <script src="~/Content/js/bootstrap-datepicker.js"></script>
+    <!-- Stellar Parallax -->
+    <script src="~/Content/js/jquery.stellar.min.js"></script>
+    <!-- Main -->
+    <script src="~/Content/js/main.js"></script>
+
+    @RenderSection("Scripts", required:false)
+    @* Good practice but not required! *@
 </body>
 </html>
